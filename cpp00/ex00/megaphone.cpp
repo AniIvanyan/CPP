@@ -6,7 +6,7 @@
 /*   By: aivanyan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 16:50:47 by aivanyan          #+#    #+#             */
-/*   Updated: 2023/08/15 18:19:34 by aivanyan         ###   ########.fr       */
+/*   Updated: 2023/11/01 22:05:46 by aivanyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 		while (*(++argv))
 		{
 			str_toupper(*argv);
-			std::cout << *argv;
+			std::cout << *argv << " ";
 		}
 	}
 	std::cout << std::endl;
