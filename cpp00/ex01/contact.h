@@ -26,5 +26,4 @@ class Contact {
 		void setSecret(const std::string& secret);
 		// display
 		void displayContact() const;
-		bool isValidPhoneNumber(const std::string& phoneNumber);
 };

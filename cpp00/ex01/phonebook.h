@@ -4,12 +4,11 @@
 class PhoneBook {
 	private:
 		Contact contacts[8];
-		int numContacts;
+		static int numContacts;
 	public:
-		//constructor
-		PhoneBook();
-
+		void displayPhonebook() const;
 		void addContact();
-		void searchContact() const;
+		void searchContact(int index) const;
 		void exitProgram() const;
+		bool isValidPhoneNumber(const std::string& phoneNumber); 
 };
