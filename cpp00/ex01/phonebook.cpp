@@ -60,7 +60,7 @@ void PhoneBook::addContact() {
 }
 
 void PhoneBook::searchContact(int index) const {
-	if (index < 0|| index > numContacts)
+	if (index < 0 || index > numContacts)
 		std::cout << "Contact with that index is not found." << std::endl;
 	else
 	{
