@@ -25,12 +25,21 @@ int main(int argc, char **argv) {
 		else if (command == "SEARCH")
 		{
 			phoneBook.displayPhonebook();
-			int index;
-			std::cout << "Enter the index of your prefered contact: ";
-			// could be better to do exception handling if not int
-			std::cin >> index;
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			phoneBook.searchContact(index);
+			try {
+				int index;
+				std::cout << "Enter the index of your prefered contact: ";
+				std::cin >> index;
+				if (std::cin.fail()) {
+            		throw std::invalid_argument("Invalid input. Please enter a valid integer.");
+        		}
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				phoneBook.searchContact(index);
+			}
+			catch (const std::exception& e) {
+				std::cin.clear(); 
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				std::cout << e.what() << std::endl;
+    		}
 		}
 		else if (command == "EXIT")
 			phoneBook.exitProgram();
