@@ -8,9 +8,6 @@ RM		= rm -rf
 
 all: $(NAME)
 
-.c.o:
-	$(CXX) $(CXXFLAGS) -c $< -o $(<:.cpp=.o)
-
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	
