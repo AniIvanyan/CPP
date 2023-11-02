@@ -3,7 +3,8 @@
 #include <string>
 #include <limits>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 	(void)argv;
 	if (argc > 1)
 	{
@@ -13,7 +14,8 @@ int main(int argc, char **argv) {
 
 	PhoneBook phoneBook;
 
-	std::cout << "You are welcomed to create your own phonebook\n" << "Commands you can use: ADD, SEARCH, EXIT" << std::endl;
+	std::cout << "You are welcomed to create your own phonebook\n"
+			  << "Commands you can use: ADD, SEARCH, EXIT" << std::endl;
 
 	while (true)
 	{
@@ -25,21 +27,24 @@ int main(int argc, char **argv) {
 		else if (command == "SEARCH")
 		{
 			phoneBook.displayPhonebook();
-			try {
+			try
+			{
 				int index;
 				std::cout << "Enter the index of your prefered contact: ";
 				std::cin >> index;
-				if (std::cin.fail()) {
-            		throw std::invalid_argument("Invalid input. Please enter a valid integer.");
-        		}
+				if (std::cin.fail())
+				{
+					throw std::invalid_argument("Invalid input. Please enter a valid integer.");
+				}
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				phoneBook.searchContact(index);
 			}
-			catch (const std::exception& e) {
-				std::cin.clear(); 
+			catch (const std::exception &e)
+			{
+				std::cin.clear();
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				std::cout << e.what() << std::endl;
-    		}
+			}
 		}
 		else if (command == "EXIT")
 			phoneBook.exitProgram();

@@ -1,6 +1,6 @@
 #include "zombie.h"
 
-Zombie* newZombie(std::string name);
+Zombie *newZombie(std::string name);
 void randomChump(std::string name);
 
 int main()
@@ -9,7 +9,7 @@ int main()
 	zombie1.announce();
 	Zombie zombie2 = Zombie("Foo");
 	zombie2.announce();
-	Zombie* zombie3 = newZombie("New Zombie");
+	Zombie *zombie3 = newZombie("New Zombie");
 	zombie3->announce();
 	randomChump("Random Zombie");
 	delete zombie3;

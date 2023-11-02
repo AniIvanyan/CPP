@@ -13,3 +13,5 @@ public:
 	std::string getName(void) const;
 	void announce(void);
 };
+
+Zombie *zombieHorde(int N, std::string name);
