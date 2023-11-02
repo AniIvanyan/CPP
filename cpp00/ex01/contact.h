@@ -10,6 +10,7 @@ class Contact {
 		std::string secret;
 	public:
 		//constructor
+		Contact();
 		Contact(std::string& firstName, std::string& lastName, std::string& nickName, std::string& phoneNumber, std::string& secret);
 		//getters
 		std::string getFirstName() const;
@@ -25,4 +26,5 @@ class Contact {
 		void setSecret(const std::string& secret);
 		// display
 		void displayContact() const;
+		bool isValidPhoneNumber(const std::string& phoneNumber);
 };

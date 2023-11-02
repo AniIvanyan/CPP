@@ -1,5 +1,8 @@
 #include <iostream>
+#include <iomanip>
 #include "contact.h"
+
+Contact::Contact() {};
 
 Contact::Contact(std::string& firstName, std::string& lastName, std::string& nickName, std::string& phoneNumber, std::string& secret)
 	: firstName(firstName), lastName(lastName), nickName(nickName), phoneNumber(phoneNumber), secret(secret){}
@@ -33,9 +36,13 @@ void Contact::setLastName(const std::string& lastName){
 	this->lastName = lastName;
 }
 
+void Contact::setNickName(const std::string& nickName){
+	this->nickName = nickName;
+}
+
 void Contact::setPhoneNumber(const std::string& phoneNumber)
 {
-	this->phoneNumber = phoneNumber;
+	this->phoneNumber = phoneNumber;;
 }
 
 void Contact::setSecret(const std::string& secret)
@@ -44,5 +51,18 @@ void Contact::setSecret(const std::string& secret)
 }
 
 void Contact::displayContact() const {
-	
+	std::cout << std::right << std::setw(10) << "| " + getFirstName();
+	std::cout << std::right << std::setw(10) << "| " + getLastName();
+	std::cout << std::right << std::setw(10) << "| " + getNickName() + " |" << std::endl;
+}
+
+bool Contact::isValidPhoneNumber(const std::string& phoneNumber){
+	if (phoneNumber.length() != 9)
+		return false;
+	for (char c: phoneNumber)
+	{
+		if (!std::isdigit(c))
+			return false;
+	}
+	return true;
 }

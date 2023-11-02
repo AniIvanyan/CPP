@@ -12,4 +12,4 @@ class PhoneBook {
 		void addContact();
 		void searchContact() const;
 		void exitProgram() const;
-}
+};
