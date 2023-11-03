@@ -3,7 +3,7 @@
 Weapon::Weapon(){};
 Weapon::Weapon(const std::string &type) : type(type){};
 
-const std::string &Weapon::getType(void) const
+const std::string& Weapon::getType(void) const
 {
 	return type;
 }

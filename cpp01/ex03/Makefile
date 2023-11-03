@@ -1,4 +1,4 @@
-NAME = zombie
+NAME = weapon
 
 SRCS	= $(wildcard *.cpp)
 OBJS	= $(SRCS:.cpp=.o)
