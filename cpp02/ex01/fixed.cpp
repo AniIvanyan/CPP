@@ -11,7 +11,7 @@ Fixed::Fixed(const int num): value(num << frac)
 	std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float num): value(roundf(num * (1 << frac)))
+Fixed::Fixed(const float num): value(std::roundf(num * (1 << frac)))
 {
 	std::cout << "Float constructor called" << std::endl;
 }

@@ -1,4 +1,4 @@
-NAME = fixedpoint1
+NAME = fixedpoint3
 
 SRCS	= $(wildcard *.cpp)
 OBJS	= $(SRCS:.cpp=.o)
