@@ -20,7 +20,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.getName())
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& rhs)
 {
 	std::cout << "Copy assignment called" << std::endl;
-	if(this == &rhs)
+	if (this == &rhs)
 		return *this;
 	this->grade = rhs.getGrade();
 	return *this;
